@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guessing Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"/>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <div class="container">
         <div class="box">
-            <h3>Guessing Game</h3>
-            <hr>
-            <input type="number" id="text">
-            <button id="button">Submit</button>
+            <h4>Guessing Game</h4>
+            <div class="info">
+                <p>Guess a number between <span class="min">1</span> and <span class="max">10</span></p>
+            </div>
+            
+            <input type="number" class="guess u-full-width" placeholder="Enter Your Guess...">
+            <button class="button u-full-width" id="button"></button>
+            <div class="progress"></div>
+            <div class="message"></div>
         </div>
     </div>
-<script src="script.js"></script>
+    <script src="/script.js"></script>
 </body>
-
 </html>
