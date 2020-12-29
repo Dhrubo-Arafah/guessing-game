@@ -7,7 +7,7 @@ let ans = Math.floor((Math.random() * 10) + 1);
 let chance = 3;
 
 let button = document.querySelector('.button');
-button.innerHTML='Check the number';
+button.innerHTML = 'Check the number';
 button.addEventListener('click', game);
 
 let guess;
@@ -29,10 +29,19 @@ function game(e) {
                 lock();
             } else {
                 let color;
-                if(chance == 2){
+                let text = 'chances are'
+                if (chance == 2) {
                     color = 'orange'
-                }else{color = 'orangered'}
-                setMessage(`Wrong Input! ${chance} Chance left`, color)
+                } else {
+                    color = 'orangered'
+                    text = 'chance is';
+                }
+                if (guess < ans) {
+                    setMessage(`Correct answer is greater! ${chance} ${text} left`, color)
+                }
+                else {
+                    setMessage(`Correct answer is smaller! ${chance} ${text} left`, color)
+                }
             }
         }
     }
@@ -45,13 +54,14 @@ function setMessage(text, color) {
     document.body.style.backgroundColor = color;
 }
 
-function lock(){
+function lock() {
     button.innerHTML = 'Reloading Game';
     button.style.backgroundColor = 'black';
+    button.disabled = true;
     document.querySelector('.guess').disabled = true;
     setTimeout(reload, 5000);
 }
 
-function reload(){
+function reload() {
     location.reload();
 }
