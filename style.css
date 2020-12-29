@@ -1,0 +1,27 @@
+.box{
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    margin-top: 150px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: white;
+}
+
+.info{
+    background-color: skyblue;
+    border-radius: 5px;
+}
+
+.min, .max{
+    text-align: center;
+    padding: 0 5px;
+    color: white;
+    border-radius: 2px;
+    background-color: rgb(0, 183, 255);
+}
+
+.message{
+    color: white;
+}
